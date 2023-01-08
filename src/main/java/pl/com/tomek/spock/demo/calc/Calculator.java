@@ -2,6 +2,8 @@ package pl.com.tomek.spock.demo.calc;
 
 public class Calculator {
 
+
+
     public double multiply(double a, double b) {
         return a * b;
     }
