@@ -45,6 +45,16 @@ class WardrobeServiceTest extends Specification {
         exception.message == "ubierz szalik baranie"
 
     }
+    def "test jesli SNOWY to zwraca kalesony buty zimowe i czapka zimowa"() {
+        given:
+        weatherServiceMock.getCurrentWeather() >> Weather.SNOWY
+
+        when:
+        def result = wardrobeService.getClothes()
+        then:
+        result == ["kalesony", "buty zimowe", "czapka zimowa"]
+
+    }
 
 
 }

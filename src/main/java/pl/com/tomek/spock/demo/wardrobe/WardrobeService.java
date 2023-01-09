@@ -20,6 +20,9 @@ public class WardrobeService {
         if(currentWeather == Weather.SUNNY){
             return List.of("kaszkietówka", "sandaly");
         }
+        if(currentWeather == Weather.SNOWY){
+            return List.of("kalesony", "buty zimowe", "czapka zimowa");
+        }
 
         return List.of();
     }
